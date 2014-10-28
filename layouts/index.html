@@ -1,0 +1,142 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+	
+		<title>CCNMTL | rewirED Fall 2014 Series</title>
+		<!--start - Facebook Open Graph-->
+		<meta property="og:image" content="images/icon-facebook.png"/>
+		<!--stop - Facebook Open Graph-->
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<!--[if lte IE 8]><script src="js/html5shiv.js"></script><![endif]-->
+		<script src="js/jquery.min.js"></script>
+		<script src="js/jquery.dropotron.min.js"></script>
+		<script src="js/skel.min.js"></script>
+		<script src="js/skel-panels.min.js"></script>
+		<script src="js/init.js"></script>
+		<noscript>
+			<link rel="stylesheet" href="css/skel-noscript.css" />
+			<link rel="stylesheet" href="css/style.css" />
+			<link rel="stylesheet" href="css/style-desktop.css" />
+			<link rel="stylesheet" href="css/style-noscript.css" />
+		</noscript>
+		
+		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie8.css" /><![endif]-->
+		
+		<link href='http://fonts.googleapis.com/css?family=Oswald:400,700' rel='stylesheet' type='text/css'>
+
+		<style>
+		body {font-family: 'Oswald', sans-serif;}
+		.toggle {display: none;}
+		.style1{margin-bottom: 0em; padding-top: 0em;}
+		</style>
+		
+	</head>
+	
+	<body class="homepage">
+
+		<!-- Header -->
+			<div id="header">
+						
+				<!-- Inner -->
+					<div class="inner">
+						<header>
+							<h1>EDTECH TALK THAT'S ALWAYS GROUNDED</h1>
+						</header>
+						<footer>
+							<a href="#banner" class="button circled scrolly"><i class="fa fa-arrow-down"></i></a>
+						</footer>
+					</div>
+				
+			</div>
+			
+		<!-- Banner -->
+			<div id="banner">
+					<div class="image"><img style="width: 700px;" src="images/banner-rewired.png" alt="" /></div>
+			</div>
+
+		<!-- Features -->
+			<div class="wrapper style1">
+				
+				<article id="main" class="container special">
+				       {{ range where .Data.Pages "Section" "main" }} 
+                                          <header>
+					    <h2>{{ .Title | safeHtml }}</h2>
+                                             {{ .Content }} 
+					  </header>
+					{{ end }}
+
+					<footer>
+						<mt:ignore><a href="#features" class="button scrolly">Register for the rewirED Fall 2014 Series</a></mt:ignore>
+					</footer>
+
+				</article>
+				
+			</div>
+
+	<!-- Carousel -->
+	<div class="carousel">
+	    <div class="reel">
+              <mt:ignore> Card reel from entries in category "Cards";
+                          Datestamp is used for sequencing; 09-01 is first card;
+                          Limit body text to two lines in card;
+              </mt:ignore>
+
+               <mt:entries category="Cards" sort_order="ascend">
+                  <mt:keyvalues source="[MTEntryBody]">
+                      <article>
+			<div class="image">
+                            <img src='images/<mt:keyvalue key="cardimg">' alt="<mt:entrytitle>" /></div>
+ 		         <header>
+				<h3><mt:entrytitle></h3>
+			</header>
+			<p><mt:keyvaluesstripped></p>
+		     </article>
+                  </mt:keyvalues></mt:entries>
+		</div>
+	</div>
+	
+		<!-- Main -->
+			<div class="wrapper style2">
+
+				<section id="features" class="container special">
+					<header>
+						<h2>LOCATIONS</h2>
+					</header>
+					<div class="row">
+						<mt:entries category="Locations" sort_order="ascend">
+						  <article class="4u special">
+						  	<header>
+						    <h3><mt:entrytitle></h3>
+						    <mt:entrybody>
+						    </header>
+						 </article>
+						 </mt:entries>
+					</div>
+				</section>
+
+			</div>
+			
+		<!-- Mission -->
+			<div class="wrapper style2">
+				
+				<section id="features" class="container special">
+				<header>
+				<div class="image"><a href="http://ccnmtl.columbia.edu" target="_blank"><img src="images/logo-new-black-vertical.png" alt="" /></a></div>
+				</header>
+					<div class="row">
+				<article class="12u special">
+				<p><mt:include module="Global CCNMTL Boilerplate" global="1"></p>
+				</article>
+				</div>
+				</section>
+				
+			</div>
+
+			<!-- Footer -->
+    			<mt:include module="Footer RWD">
+
+	</body>
+</html>

@@ -1,0 +1,10 @@
+baseurl = "http://ccnmtl.columbia.edu/events/websites/rewired_f14"
+languageCode = "en-us"
+title = "CCNMTL | rewirED Fall 2014 Series"
+
+# These are the default settings, but to make them explicit
+contentdir = "content"
+layoutdir = "layouts"
+publishdir = "public"
+canonifyurls = true
+
